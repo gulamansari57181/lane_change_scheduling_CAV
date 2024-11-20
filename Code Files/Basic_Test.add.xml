@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- Dashed white line for lane separation -->
+    <poly id="dash_line_1" color="1,1,1" fill="0" lineWidth="0.1" shape="-76.34,6.00 -74.34,6.00" layer="10" />
+    <poly id="dash_line_2" color="1,1,1" fill="0" lineWidth="0.1" shape="-72.34,6.00 -70.34,6.00" layer="10" />
+    <poly id="dash_line_3" color="1,1,1" fill="0" lineWidth="0.1" shape="-68.34,6.00 -66.34,6.00" layer="10" />
+    <poly id="dash_line_4" color="1,1,1" fill="0" lineWidth="0.1" shape="-64.34,6.00 -62.34,6.00" layer="10" />
+    <poly id="dash_line_5" color="1,1,1" fill="0" lineWidth="0.1" shape="-60.34,6.00 -58.34,6.00" layer="10" />
+    <poly id="dash_line_6" color="1,1,1" fill="0" lineWidth="0.1" shape="-56.34,6.00 -54.34,6.00" layer="10" />
+    <poly id="dash_line_7" color="1,1,1" fill="0" lineWidth="0.1" shape="-52.34,6.00 -50.34,6.00" layer="10" />
+    <poly id="dash_line_8" color="1,1,1" fill="0" lineWidth="0.1" shape="-48.34,6.00 -46.34,6.00" layer="10" />
+    <poly id="dash_line_9" color="1,1,1" fill="0" lineWidth="0.1" shape="-44.34,6.00 -42.34,6.00" layer="10" />
+    <poly id="dash_line_10" color="1,1,1" fill="0" lineWidth="0.1" shape="-40.34,6.00 -38.34,6.00" layer="10" />
+    <poly id="dash_line_11" color="1,1,1" fill="0" lineWidth="0.1" shape="-36.34,6.00 -34.34,6.00" layer="10" />
+    <poly id="dash_line_12" color="1,1,1" fill="0" lineWidth="0.1" shape="-32.34,6.00 -30.34,6.00" layer="10" />
+    <poly id="dash_line_13" color="1,1,1" fill="0" lineWidth="0.1" shape="-28.34,6.00 -26.34,6.00" layer="10" />
+    <poly id="dash_line_14" color="1,1,1" fill="0" lineWidth="0.1" shape="-24.34,6.00 -22.34,6.00" layer="10" />
+    <poly id="dash_line_15" color="1,1,1" fill="0" lineWidth="0.1" shape="-20.34,6.00 -18.34,6.00" layer="10" />
+    <poly id="dash_line_16" color="1,1,1" fill="0" lineWidth="0.1" shape="-16.34,6.00 -14.34,6.00" layer="10" />
+    <poly id="dash_line_17" color="1,1,1" fill="0" lineWidth="0.1" shape="-12.34,6.00 -10.34,6.00" layer="10" />
+    <poly id="dash_line_18" color="1,1,1" fill="0" lineWidth="0.1" shape="-8.34,6.00 -6.34,6.00" layer="10" />
+    <poly id="dash_line_19" color="1,1,1" fill="0" lineWidth="0.1" shape="-4.34,6.00 -2.34,6.00" layer="10" />
+    <poly id="dash_line_20" color="1,1,1" fill="0" lineWidth="0.1" shape="0.34,6.00 2.34,6.00" layer="10" />
+    <poly id="dash_line_21" color="1,1,1" fill="0" lineWidth="0.1" shape="4.34,6.00 6.34,6.00" layer="10" />
+    <poly id="dash_line_22" color="1,1,1" fill="0" lineWidth="0.1" shape="8.34,6.00 10.34,6.00" layer="10" />
+    <poly id="dash_line_23" color="1,1,1" fill="0" lineWidth="0.1" shape="12.34,6.00 14.34,6.00" layer="10" />
+    <poly id="dash_line_24" color="1,1,1" fill="0" lineWidth="0.1" shape="16.34,6.00 18.34,6.00" layer="10" />
+</additional>

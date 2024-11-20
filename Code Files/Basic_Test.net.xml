@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+    <location netOffset="0.00,0.00" convBoundary="-76.34,6.95,18.54,6.95" origBoundary="10000000000.00,10000000000.00,-10000000000.00,-10000000000.00" projParameter="!"/>
+    
+    <!-- Single road segment from J0 to J1 with two lanes -->
+    <edge id="E0" from="J0" to="J1" priority="1">
+        <lane id="E0_0" index="0" speed="13.89" length="100.00" shape="-76.34,5.00 18.54,5.00"/> <!-- Left lane -->
+        <lane id="E0_1" index="1" speed="13.89" length="100.00" shape="-76.34,7.00 18.54,7.00"/> <!-- Right lane -->
+    </edge>
+
+    <!-- Junctions -->
+    <junction id="J0" type="dead_end" x="-76.34" y="6.00" incLanes="E0_0 E0_1" intLanes="" shape="-76.34,5.00 -76.34,7.00"/>
+    <junction id="J1" type="dead_end" x="18.54" y="6.00" incLanes="E0_0 E0_1" intLanes="" shape="18.54,5.00 18.54,7.00"/>
+</net>

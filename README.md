@@ -153,7 +153,7 @@ The simulation logs lane change events in the terminal, including:
 Vehicle v_1 started lane change from lane 0 to lane 1 at step 4 due to: Maintaining safe distance from leader.
 Vehicle v_3 started lane change from lane 0 to lane 1 at step 9 due to: Maintaining safe distance from leader.
 Vehicle v_4 started lane change from lane 0 to lane 1 at step 17 due to: Maintaining safe distance from leader.
-Total lane change scheduling time: 52480.02 ms
+Total lane change scheduling time: 456.65 ms
 
 ```
 
@@ -166,9 +166,6 @@ Below is a snapshot of the visual output generated during the simulation:
 
 #### SUMO Simulator Terminal Snapshot
 ![SUMO Simulator Terminal Snapshot](https://github.com/gulamansari57181/lane_change_scheduling_CAV/blob/main/Flowcharts/Sumo_Simulator_Terminal_Snapshot.png?raw=true)
-
-#### Terminal Output After Scheduling of Vehicles
-![Terminal Output](https://github.com/gulamansari57181/lane_change_scheduling_CAV/blob/main/Flowcharts/Terminal_Output.png?raw=true)
 
 #### Lane Change Scheduling Time for Vehicles
 ![Lane Change Scheduling Time](https://github.com/gulamansari57181/lane_change_scheduling_CAV/blob/main/Flowcharts/Lane_Change_Time_Graph.png?raw=true)

@@ -11,8 +11,8 @@ traci.start(sumo_cmd)
 lane_change_info = {}
 vehicle_positions = {}
 lane_change_schedule_times = {}  # Dictionary to track lane change times in milliseconds
-min_safe_distance = 10.0  # Safe distance in meters
-max_acceleration = 2.5
+min_safe_distance = 9 # Safe distance in meters
+max_acceleration = 3.5
 min_deceleration = -2.5
 minimum_speed = 2.0  # Minimum speed to prevent stopping on the road
 
@@ -88,6 +88,8 @@ initialize_vehicles()
 # Dictionary to store global information shared among vehicles
 global_vehicle_info = {}
 
+lane_change_durations = []  # List to store each vehicle's lane change scheduling time
+
 while step < 50:  # Set total steps as per simulation needs
     traci.simulationStep()
 
@@ -133,7 +135,7 @@ while step < 50:  # Set total steps as per simulation needs
 
             # Check if the vehicle needs to adjust position relative to MP
             if distance_to_leader < min_safe_distance:
-                # Capture the lane change start time for scheduling
+                reason = "Maintaining safe distance from leader"
                 if vehicle_id not in lane_change_schedule_times:
                     lane_change_schedule_times[vehicle_id] = time.time() * 1000  # Record start time in ms
 
@@ -157,11 +159,11 @@ while step < 50:  # Set total steps as per simulation needs
                 if lane_id == "E0_0" and vehicle_id not in lane_change_info:
                     traci.vehicle.changeLane(vehicle_id, 1, 10)
                     lane_change_info[vehicle_id] = {'start_time': step, 'target_lane': 1}
-                    print(f"Vehicle {vehicle_id} started lane change from lane 0 to lane 1 at step {step}.")
+                    print(f"Vehicle {vehicle_id} started lane change from lane 0 to lane 1 at step {step} due to: {reason}.")
                 elif lane_id == "E0_1" and vehicle_id not in lane_change_info:
                     traci.vehicle.changeLane(vehicle_id, 0, 10)
                     lane_change_info[vehicle_id] = {'start_time': step, 'target_lane': 0}
-                    print(f"Vehicle {vehicle_id} started lane change from lane 1 to lane 0 at step {step}.")
+                    print(f"Vehicle {vehicle_id} started lane change from lane 1 to lane 0 at step {step} due to: {reason}.")
 
     step += 1
 
@@ -170,6 +172,8 @@ lane_change_times = {
     vehicle_id: time.time() * 1000 - start_time  # Convert time to milliseconds
     for vehicle_id, start_time in lane_change_schedule_times.items()
 }
+total_lane_change_time = sum(lane_change_times.values())  # Calculate total scheduling time
+print(f"Total lane change scheduling time: {total_lane_change_time:.2f} ms")
 
 # Plot lane change scheduling times
 plt.figure(figsize=(10, 6))
@@ -185,16 +189,14 @@ plt.show()
 # Plot vehicle positions over time
 plt.figure(figsize=(10, 6))
 for vehicle_id, positions in vehicle_positions.items():
-    if positions:  # Only plot if there are recorded positions
-        times, positions_x = zip(*positions)
-        plt.plot(times, positions_x, label=f"{vehicle_id}")
-
+    steps, x_positions = zip(*positions)
+    plt.plot(steps, x_positions, label=vehicle_id)
 plt.title("Vehicle Positions Over Time")
-plt.xlabel("Time (steps)")
-plt.ylabel("Position (meters)")
+plt.xlabel("Simulation Step")
+plt.ylabel("Position (x-axis)")
 plt.legend()
 plt.grid(True)
 plt.show()
 
-# Close the TraCI connection
+# Close the SUMO simulation
 traci.close()

@@ -187,6 +187,5 @@ There are several potential enhancements for the lane change scheduling algorith
   Implement machine learning techniques to predict lane changes based on real-time traffic data, optimizing lane change decisions for better efficiency and safety.
 
 - **Simulate Larger Road Networks and Traffic Conditions**: 
-  Expand the simul
-   
+  Expand simulations to larger, more complex road networks with multi-lane highways, intersections, and varying traffic densities to evaluate the algorithm's scalability, adaptability, and performance in real-world traffic scenarios.
    

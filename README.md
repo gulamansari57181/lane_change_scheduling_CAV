@@ -13,7 +13,6 @@ This project demonstrates the implementation of a lane change scheduling algorit
 - [Explanation of Code Files](#explanation-of-code-files)
 - [Outputs and Visualizations](#outputs-and-visualizations)
 - [Sample Terminal Output](#sample-terminal-output)
-- [License](#license)
 - [Future Improvements](#future-improvements)
 
 ---
